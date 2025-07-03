@@ -29,7 +29,6 @@ class EnvirData {
   }
 
   getEnvData() {
-    console.log("Resolved ENV:", this.envir); // Add this for debug
     switch (this.envir) {
       case ENV.qa.toUpperCase():
         return QA_DATA;
