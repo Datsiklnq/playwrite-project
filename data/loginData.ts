@@ -1,4 +1,7 @@
-export const testMeta = {
+// utils/testMeta.ts
+import { TestDataMap } from "../page_object/types/test-meta.type";
+
+export const testData: TestDataMap = {
   12345: {
     name: "Valid Login Test",
     description: "Should login successfully with valid credentials.",
@@ -8,5 +11,9 @@ export const testMeta = {
     name: "Invalid Login Test",
     description: "Should show error message with invalid credentials.",
     tags: ["negative", "login"],
+    message: {
+      expectedMessage:
+        "Epic sadface: Username and password do not match any user in this service",
+    },
   },
 };

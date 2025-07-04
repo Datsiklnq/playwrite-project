@@ -1,6 +1,5 @@
-import { Page, Locator } from "@playwright/test";
+import { Page, Locator, expect } from "@playwright/test";
 import { EnvirData } from "../../../utils/env/env.data";
-
 const environmentVariables = () => new EnvirData();
 
 export class LoginPage {
@@ -29,5 +28,13 @@ export class LoginPage {
 
   async getErrorMessage() {
     return this.errorMessage.textContent();
+  }
+  async verifyErrorMessage(expectedMessage?: string) {
+    if (!expectedMessage) {
+      throw new Error("Expected error message is not provided.");
+    }
+
+    const actualMessage = await this.getErrorMessage();
+    expect(actualMessage?.trim()).toBe(expectedMessage);
   }
 }
