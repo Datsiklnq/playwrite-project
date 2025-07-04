@@ -2,9 +2,7 @@
 This is an end-to-end test automation framework built with Playwright, designed to support scalable testing across multiple environments using the Page Object Model, test metadata, and GitHub Actions CI.
 
 📁 Folder Structure
-bash
-Copy
-Edit
+
 playwright-project/
 ├── e2e/                            # Test specs
 ├── page_object/                   # Page Object Model files
@@ -17,23 +15,17 @@ playwright-project/
 ├── types/                         # TypeScript interfaces
 ├── .github/workflows/            # CI pipelines
 ├── playwright.config.ts          # Playwright global config
+
+
 🚀 Getting Started
 1. Install dependencies
-bash
-Copy
-Edit
 npm install
-2. Run tests in specific environment
-bash
-Copy
-Edit
+
+3. Run tests in specific environment
 npx playwright test -- --env QA
 Supported environments:
-
 QA
-
 Stage
-
 UAT
 (Defined in utils/env/env.var.ts and env_data/)
 
@@ -52,33 +44,25 @@ Copy
 Edit
 testMeta[12346].message?.expectedMessage
 ✅ Enum-Based Assertions
-ts
-Copy
-Edit
 LoginMessages.INVALID_CREDENTIALS
+
 ✅ GitHub Actions Integration
 Runs tests across environments via matrix build.
 
-yaml
-Copy
-Edit
 strategy:
   matrix:
     env: [qa, stage, uat]
 🧪 Example Test
-ts
-Copy
-Edit
+
 test('Invalid login shows error', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.open();
   await loginPage.login('invalid_user', 'wrong_password');
   await loginPage.verifyErrorMessage(testMeta[12346].message?.expectedMessage);
 });
+
 📜 Custom Metadata Format
-ts
-Copy
-Edit
+
 export const testMeta = {
   12345: {
     name: "Valid Login Test",
