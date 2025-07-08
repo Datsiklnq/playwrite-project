@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { LoginPage } from "../page_object/pages/base_pages/LoginPage";
 import { EnvirData } from "../utils/env/env.data";
 import { testData } from "../data/loginData";
-import { LoginMessages } from "../utils/constants/login.message.enum";
+
 
 const environmentVariables = () => new EnvirData();
 
