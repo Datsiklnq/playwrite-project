@@ -1,0 +1,23 @@
+{
+  "standard_user": {
+    "name": "Standard User",
+    "email": "standard@example.com",
+    "password": "secret_sauce",
+    "role": "user",
+    "isActive": true
+  },
+  "locked_user": {
+    "name": "Locked Out User",
+    "email": "locked@example.com",
+    "password": "wrong_password",
+    "role": "user",
+    "isActive": false
+  },
+  "admin_user": {
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "role": "admin",
+    "isActive": true
+  }
+}
