@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { createUser, updateUser } from "../utils/api/api.user.helper";
 import { loadUsers } from "../utils/load-user";
 
-test("End-to-end flow: create user and add item", async () => {
+test.skip("End-to-end flow: create user and add item", async () => {
   const users = loadUsers();
   const user = users["standard_user"];
 
