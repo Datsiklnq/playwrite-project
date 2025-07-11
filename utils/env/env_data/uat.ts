@@ -10,4 +10,7 @@ export const UAT_DATA = {
     locked_user_pass: "wrong_password",
     problem_user_pass: "problem_user",
   },
+  EMAIL: {
+    standard_user_email: "test12345@test.com",
+  },
 };

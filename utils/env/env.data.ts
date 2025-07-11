@@ -41,13 +41,18 @@ class EnvirData {
     }
   }
   // apiCore url
-  //https://www.saucedemo.com/
+  //https://practice.expandtesting.com/notes/app/
+  //https://practice.expandtesting.com/notes/api/users/register
   private get envAppUrl(): IEnvDataUrl {
     switch (this.envir) {
       case ENV.qa.toUpperCase():
         return {
-          appApiCoreUrl: `${this.buildUrl("https", "", "")}/api`,
-          appUrl: `${this.buildUrl("https", "www.", "saucedemo.com")}`,
+          appApiCoreUrl: `${this.buildUrl(
+            "https",
+            "practice.expandtesting.",
+            "com"
+          )}/notes/api/user/register`,
+          appUrl: `${this.buildUrl("https", "practice.expandtesting.", "com")}`,
         };
       case ENV.stage.toUpperCase():
         return {
