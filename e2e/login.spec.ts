@@ -32,4 +32,14 @@ test.describe("Login Tests", () => {
       testData[12346].message?.expectedMessage
     );
   });
+  test(`Test Case: ${testData[12347].name}`, async ({ page }) => {
+    await loginPage.login(
+      EMAIL.invalid_user_email,
+      PASSWORD.standard_user_pass
+    ); //predefined user
+    const error = await loginPage.getErrorMessage();
+    await loginPage.verifyErrorMessage(
+      testData[12347].message?.expectedMessage
+    );
+  });
 });

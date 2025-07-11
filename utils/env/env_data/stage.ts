@@ -12,5 +12,7 @@ export const STAGE_DATA = {
   },
   EMAIL: {
     standard_user_email: "test12345@test.com",
+    invalid_user_email: "test@example.com",
+    
   },
 };
