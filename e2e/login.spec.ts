@@ -11,7 +11,8 @@ const { EMAIL, PASSWORD } = environmentVariables().getEnvData();
 
 test.describe("Login Tests", () => {
   let loginPage: LoginPage;
-
+  //test(...) is calling the test function
+  // ({ page }) is extracting the page object
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     await loginPage.open();
@@ -25,14 +26,14 @@ test.describe("Login Tests", () => {
     await expect(page).toHaveURL(/app/); //Successful login lands on inventory page
   });
 
-  test(`Test Case: ${testData[12346].name}`, async ({ page }) => {
+  test(`Test Case: ${testData[12346].name}`, async () => {
     await loginPage.login(EMAIL.standard_user_email, PASSWORD.locked_user_pass); //predefined user
     const error = await loginPage.getErrorMessage();
     await loginPage.verifyErrorMessage(
       testData[12346].message?.expectedMessage
     );
   });
-  test(`Test Case: ${testData[12347].name}`, async ({ page }) => {
+  test(`Test Case: ${testData[12347].name}`, async ({}) => {
     await loginPage.login(
       EMAIL.invalid_user_email,
       PASSWORD.standard_user_pass
