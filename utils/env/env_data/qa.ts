@@ -10,4 +10,7 @@ export const QA_DATA = {
     locked_user_pass: "wrong_password",
     problem_user_pass: "",
   },
+  EMAIL: {
+    standard_user_email: "test12345@test.com",
+  },
 };

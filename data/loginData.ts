@@ -12,8 +12,7 @@ export const testData: TestDataMap = {
     description: "Should show error message with invalid credentials.",
     tags: ["negative", "login"],
     message: {
-      expectedMessage:
-        "Epic sadface: Username and password do not match any user in this service",
+      expectedMessage: "Incorrect email address or password",
     },
   },
 };
