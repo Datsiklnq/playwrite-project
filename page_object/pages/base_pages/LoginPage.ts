@@ -8,6 +8,7 @@ export class LoginPage {
   readonly passowrdInput: Locator;
   readonly emailInput: Locator;
   readonly loginButton: Locator;
+  readonly incorrectEmailOrPassword: Locator;
   readonly errorMessage: Locator;
   readonly cookiesAcceptModal: Locator;
   constructor(page: Page) {
@@ -16,6 +17,7 @@ export class LoginPage {
     this.passowrdInput = page.locator("#password");
     this.emailInput = page.locator("#email");
     this.loginButton = page.locator("[data-testid='login-submit']");
+    this.incorrectEmailOrPassword = page.locator("");
     this.errorMessage = page.locator("[data-testid='alert-message']");
     this.cookiesAcceptModal = page.locator("#rcc-confirm-button");
   }
