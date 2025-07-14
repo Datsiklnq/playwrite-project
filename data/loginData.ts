@@ -5,12 +5,12 @@ export const testData: TestDataMap = {
   12345: {
     name: "Valid Login Test",
     description: "Should login successfully with valid credentials.",
-    tags: ["smoke", "login"],
+    tags: ["@smoke", "@login", "@regression"],
   },
   12346: {
     name: "Invalid Login Password Test",
     description: "Should show error message with invalid password.",
-    tags: ["negative", "login"],
+    tags: ["@negative", "@login", "@regression"],
     message: {
       expectedMessage: "Incorrect email address or password",
     },
@@ -18,7 +18,7 @@ export const testData: TestDataMap = {
   12347: {
     name: "Invalid Login Email Test",
     description: "Should show error message with invalid email.",
-    tags: ["negative", "login"],
+    tags: ["@negative", "@login", "@regression"],
     message: {
       expectedMessage: "Incorrect email address or password",
     },
